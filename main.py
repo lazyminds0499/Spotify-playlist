@@ -13,8 +13,8 @@ all_artist = soup.find_all(name="span", class_="chart-element__information__arti
 songs = [song.text for song in all_songs]
 artists = [artist.text for artist in all_artist]
 
-client_id = "d16aa4647e5743eaa173f846b3cd5043"
-client_secret = "4ac129d749014abfbced919094dd71ec"
+client_id = "CLIENT ID"
+client_secret = "CLIENT SECRET"
 
 scope = "playlist-modify-private"
 data = {
@@ -36,7 +36,7 @@ sp = spotipy.Spotify(
 )
 user_id = sp.current_user()["id"]
 headers = {
-    "Authorization": "Bearer BQAaF3wQs0iU4QKq3x9EWecr-TTHPBNwWz6_79yeFyVtRE8eDG2EZ3Tn5lPBgLNMCObqaB1aBQowRiucKLzagNRdcxlcNk5U4e0mrEWBt4KdySawOXbjiF9zpLQSABLfIUlhrSQcn7s82EziRK-H1SpKXEG7HCkEySX88HsgAxElVhVfD1Wq9AaAhE9M0TapqW_1YxNXOC9MeQ",
+    "Authorization": "TOKEN",
     "Content-Type": "application/json",
     "Accept": "application/json"
 }
@@ -62,7 +62,7 @@ playlist_id = playlist_data["id"]
 
 spotify_playlist_url = f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks?"
 playlist_header = {
-    "Authorization": "Bearer BQAaF3wQs0iU4QKq3x9EWecr-TTHPBNwWz6_79yeFyVtRE8eDG2EZ3Tn5lPBgLNMCObqaB1aBQowRiucKLzagNRdcxlcNk5U4e0mrEWBt4KdySawOXbjiF9zpLQSABLfIUlhrSQcn7s82EziRK-H1SpKXEG7HCkEySX88HsgAxElVhVfD1Wq9AaAhE9M0TapqW_1YxNXOC9MeQ",
+    "Authorization": "TOKEN",
     "Content-Type": "application/json"
 }
 for uri in uri_id:
